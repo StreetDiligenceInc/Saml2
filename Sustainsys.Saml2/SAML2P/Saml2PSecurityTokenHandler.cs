@@ -157,7 +157,7 @@ namespace Sustainsys.Saml2.Saml2P
                 // Create a new instance instead of modifying the one from the
                 // configuration.
                 audienceRestriction = new AudienceRestriction(audienceRestriction.AudienceMode);
-                audienceRestriction.AllowedAudienceUris.Add(new Uri(spOptions.EntityId.Id));
+                audienceRestriction.AllowedAudienceUris.Add(new Uri(spOptions.EntityId.Id, UriKind.RelativeOrAbsolute));
             }
 
             return audienceRestriction;
